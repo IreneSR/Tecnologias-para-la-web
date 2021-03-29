@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4- Formularios</title>
+</head>
+<body>
+    <header>
+        <nav></nav>
+    </header>
+
+    <main>
+        <section>
+            <!--POST = Los campos van ocultos = body-->
+            <!--GET = Los datos de los campos van en la URL-->
+           <!--name = para identificar los campos que se mandan -->
+           <!-- id= Para trabajar con los campos de manera loca = en la misma pagina--> 
+           <!--Conjunto de Campos
+            POST
+            universidad=IPN
+            instituto=ESCOM
+            rama=3
+            grado=1
+            estatus=1
+            promedio=8
+            experiencia=3
+
+            GET
+            ?universidad=IPN&instituto=ESCOM&rama=3&grado=1&estatus=1&promedio=8&experiencia=3
+           -->
+            
+            <form action="guarda.php"method="POST">
+                <fieldset>
+                <legend>Detalles de Registro</legend>
+
+                <table align="center">
+                    <tr>
+                        <td><label for="universidas">Universidad:</label></td>
+                        <td><input type="text" id="universidad" name="universidad"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="instituto">Instituto:</label></td>
+                        <td><input type="text" id="instituto" name="instituto"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Rama</label></td>
+                        <td>
+                            <select id="rama" name="rama">
+                                <option value="1">Fisico Matematico</option>
+                                <option value="2">Quimico biologico</option>
+                                <option value="3">Ciencias Sociales</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Grado:</label></td>
+                        <td>
+                            <select id="grado" name="grado">
+                                <option value="1">Doctorado</option>
+                                <option value="2">Maestria</option>
+                                <option value="3">Especialidad</option>
+                                <option value="4">Licenciatura</option>
+                                <option value="5">Media Superior</option>
+
+                            </select>
+                            <input type="radio" id="status" name="status" value=1><label>En proceso</label>
+                            <input type="radio" id="status" name="status" value=2><label>Terminado</label>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td><label for="promedio">Promedio:</label></td>
+                        
+                        <td>
+                            <input type="number" id="experiencia" name="experiencia">
+                        </td>     
+                    </tr>
+                    <tr>
+                    <td><label for="sitioweb">Sitio Web</label></td> 
+                    <td><input type="url" id="sitioweb" name="sitioweb" value="http://"></td>  
+                </tr>
+                <tr>
+                    <td><input type="submit" id="enviar" name="enviar" value="Enviar formulario"></td>
+                    <td><input type="reset" id="limpiar" name="limpiar" value="Limpiar formulario"></td>
+                </tr>
+                </table>
+               
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
