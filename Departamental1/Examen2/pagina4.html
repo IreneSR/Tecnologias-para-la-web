@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="e">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="guarda.php"method="POST"> 
+        <table align="center">
+        <h1 align="center">CATÁLOGO DE ARTE</h1>
+        <h2>Introduce los términos de búsqueda:</h2>
+
+        <tr>
+            <td colspan="2"align="center"><b>OBRA</b> <td>
+            <td colspan="2"align="center"><b>TIPO</b></td>
+            <td colspan="2"align="center"><b>DISPONIBILIDAD</b></td>
+            <td colspan="2"align="center"><b>ESTILO</b></td>
+        </tr>
+
+        <tr>
+            <td><label for="titulo">Titulo:</label></td>
+            <td><input type="text" id="titulo" name="titulo"></td>
+            <td><input type="checkbox" id="titulo" name="titulo"></td>
+            <td><label for="escultura">Escultura</label></td>
+            <td><input type="radio" id="disponibilidad" name="disponibilidad"></td>
+            <td><label for="titulo">Museo / Acceso público</label></td>
+            <td><select name="estilo" id="estilo">
+                <option value="1">Clásico</option>
+                <option value="2">Moderno</option>
+                <option value="3">Actual</option>
+                <option value="4">Contemporaneo</option>
+            </select></td>
+        </tr>
+
+        <tr>
+            <td><label for="autor">Autor:</label></td>
+            <td><input type="text" id="autor" name="autor"></td>
+            <td><input type="checkbox" id="arquitectura" name="arquitectura"></td>
+            <td><label for="arquitectura">Arquitectura</label></td>
+            <td><input type="radio" id="disponibilidad" name="disponibilidad"></td>
+            <td><label for="titulo">Coleccion privada</label></td>
+        </tr>
+
+        <tr>
+            <td><label for=""></label></td>
+            <td></td>
+            <td><input type="checkbox" id="pintura" name="pintura"></td>
+            <td><label for="pintura">Pintura</label></td>
+        </tr>
+        </table>
+
+        <h2>Háganos saber sus sugerencias:</h2>
+        <textarea name="" id="" cols="60" rows="5">Me gustaría indicar que...</textarea> <br>
+        <td><input type="submit" id="enviar" name="enviar" value="Buscar"></td>
+    </form>
+</body>
+</html>
