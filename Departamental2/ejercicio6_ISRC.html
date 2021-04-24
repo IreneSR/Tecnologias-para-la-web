@@ -48,14 +48,15 @@
       </li>
 
       <!-- Messages Dropdown Menu -->
-       <!-- Notifications Dropdown Menu -->
+      
+      <!-- Notifications Dropdown Menu -->
+      
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class= "fas fa-expand-arrows-alt"></i>
+          <i class="fas fa-expand-arrows-alt"></i>
         </a>
       </li>
       
-       
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -98,7 +99,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                <li class="nav-item">
-                <a href="../ejercicio5_ISRC.html" class="nav-link active">
+                <a href="ejercicio5_ISRC.html" class="nav-link ">
                   <i class="fa fa-fw fa-calculator"></i> 
                   <p>
                     Calculadora Basica
@@ -107,7 +108,7 @@
               </li>
 
               <li class="nav-item">
-                <a href="ejercicio6_ISRC.html" class="nav-link">
+                <a href="ejercicio6_ISRC.html" class="nav-link active">
                   <i class="fa fa-fw fa-calculator"></i> 
                   <p>
                     Calculadora Cientifica
@@ -116,7 +117,7 @@
               </li>
 
               <li class="nav-item">
-                <a href="../gallery.html" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="fa fa-fw fa-spinner"></i>
                   <p>
                     Opcion 3
@@ -125,7 +126,7 @@
               </li>
 
               <li class="nav-item">
-                <a href="../gallery.html" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="fa fa-fw fa-spinner"></i>
                   <p>
                     Opcion 4
@@ -134,14 +135,14 @@
               </li>
 
               <li class="nav-item">
-                <a href="../gallery.html" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="fa fa-fw fa-spinner"></i>
                   <p>
                     Opcion 5
                   </p>
                 </a>
               </li>
-              
+
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="fa fa-fw fa-ban"></i>
@@ -149,8 +150,9 @@
                     Salir
                   </p>
                 </a>
-              </li>          
+              </li>
 
+      
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -192,17 +194,181 @@
               <!-- form start -->
               <form>
                 <div class="card-body">
-                  <div class="form-group">
-                    <label for="numero1">Numero 1:</label>
-                    <input type="number" class="form-control" id="numero1" placeholder="Digite número 1" value="0">
+
+                  <!--Display de calculadora-->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                      <input type="text" class="form-control" style="text-align: right;" id="display" value="0" readonly>
+                    </div>
                   </div>
-                  <div class="form-group">
-                    <label for="numero2">Numero 2:</label>
-                    <input type="number" class="form-control" id="numero2" placeholder="Digite número 2" value="0"> 
                   </div>
-                  <div class="form-group">
-                  <p id="resultado">Resultado: 0</p>  
+                  <!--/.Display de calculadora-->
+
+                  <!--1º Renglon para (),%,etc-->
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <button type="button" class="btn btn-block btn-success">X!</button>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2">
+                      <div class="form-group">
+                        <button type="button" class="btn btn-block btn-success">(</button>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2">
+                      <div class="form-group">
+                        <button type="button" class="btn btn-block btn-success">)</button>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2">
+                      <div class="form-group">
+                        <button type="button" class="btn btn-block btn-success">%</button>
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <button type="button" class="btn btn-block btn-success"onclick="limpiaDisplay('AC');">AC</button>
+                      </div>
+                    </div>
                   </div>
+
+                  <!--2º-->
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <button type="button" class="btn btn-block btn-success">ln</button>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2">
+                      <div class="form-group">
+                        <button type="button" class="btn btn-block btn-default" onclick="clickDigito(7);">7</button>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2">
+                      <div class="form-group">
+                        <button type="button" class="btn btn-block btn-default" onclick="clickDigito(8);">8</button>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2">
+                      <div class="form-group">
+                        <button type="button" class="btn btn-block btn-default" onclick="clickDigito(9);">9</button>
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <button type="button" class="btn btn-block btn-success" onclick="presionaOperador('/');">/</button>
+                      </div>
+                    </div>
+                  </div>
+
+                    <!--3º-->
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <button type="button" class="btn btn-block btn-success">log</button>
+                        </div>
+                      </div>
+  
+                      <div class="col-md-2">
+                        <div class="form-group">
+                          <button type="button" class="btn btn-block btn-default" onclick="clickDigito(4);">4</button>
+                        </div>
+                      </div>
+  
+                      <div class="col-md-2">
+                        <div class="form-group">
+                          <button type="button" class="btn btn-block btn-default" onclick="clickDigito(5);">5</button>
+                        </div>
+                      </div>
+  
+                      <div class="col-md-2">
+                        <div class="form-group">
+                          <button type="button" class="btn btn-block btn-default" onclick="clickDigito(6);">6</button>
+                        </div>
+                      </div>
+  
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <button type="button" class="btn btn-block btn-success">X</button>
+                        </div>
+                      </div>
+                    </div>
+
+                      <!--4º-->
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <button type="button" class="btn btn-block btn-success">Raiz</button>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2">
+                      <div class="form-group">
+                        <button type="button" class="btn btn-block btn-default" onclick="clickDigito(1);">1</button>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2">
+                      <div class="form-group">
+                        <button type="button" class="btn btn-block btn-default" onclick="clickDigito(2);">2</button>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2">
+                      <div class="form-group">
+                        <button type="button" class="btn btn-block btn-default" onclick="clickDigito(3);">3</button>
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <button type="button" class="btn btn-block btn-success"onclick="presionaOperador('-');">-</button>
+                      </div>
+                    </div>
+                  </div>
+
+                    <!--5º-->
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <button type="button" class="btn btn-block btn-success">xy</button>
+                        </div>
+                      </div>
+  
+                      <div class="col-md-2">
+                        <div class="form-group">
+                          <button type="button" class="btn btn-block btn-default" onclick="clickDigito(0);">0</button>
+                        </div>
+                      </div>
+  
+                      <div class="col-md-2">
+                        <div class="form-group">
+                          <button type="button" class="btn btn-block btn-default">.</button>
+                        </div>
+                      </div>
+  
+                      <div class="col-md-2">
+                        <div class="form-group">
+                          <button type="button" class="btn btn-block btn-info"onclick="presionaIgual('=');">=</button>
+                        </div>
+                      </div>
+  
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <button type="button" class="btn btn-block btn-success">+</button>
+                        </div>
+                      </div>
+                    </div>
 
                   <!-- <div class="form-group">
                     <label for="exampleInputFile">File input</label>
@@ -224,15 +390,6 @@
                 </div>
                 <!-- /.card-body -->
 
-                <div class="card-footer">
-                  <button type="button" class="btn btn-primary"onclick="sumaNumeros();">Suma</button>
-                  <button type="button" class="btn btn-success"onclick="restaNumeros();">Resta</button>
-                  <button type="button" class="btn btn-info"onclick="multiplicaNumeros();">Multiplicacion</button>
-                  <button type="button" class="btn btn-danger"onclick="divideNumeros();">División</button>
-
-                </div>
-              </form>
-            </div>
             <!-- /.card -->
 
             <!-- general form elements -->
@@ -286,7 +443,8 @@
 <!-- AdminLTE for demo purposes -->
 <script src="../plantilla/dist/js/demo.js"></script>
 <!-- Page specific script -->
-<script src="js/calculadora.js"></script>
+
+<script src="js/calculadoraCientifica.js"></script>
 <script>
 $(function () {
   bsCustomFileInput.init();
