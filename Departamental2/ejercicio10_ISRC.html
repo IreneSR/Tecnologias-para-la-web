@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ejercicio 10 | CSS</title>
+
+  
+  <link rel="stylesheet" href="css/ejercicio10_ISRC.css">
+  <script src="https://kit.fontawesome.com/8a8a9aae0d.js" crossorigin="anonymous"></script>
+  <head>
+ <body>
+
+    <a href="#" class="boton boton-default">Boton - Default</a>
+    <a href="#" class="boton boton-primario">Primary - Primario</a>
+    <a href="#" class="boton boton-secundario">Secondary - Secundario</a>
+    <a href="#" class="boton boton-exito">Success - Exito</a>
+    <a href="#" class="boton boton-info" onclick="mostrarInfo();">Info - Informacion</a>
+    <a href="#" class="boton boton-peligro">Danger - Peligro</a>
+    <a href="#" class="boton boton-precaucion" onclick="mostrarWarning();">Warning - Precaucion</a>
+     
+    <div class="div-rojo div-general div-danger">
+        <h4><i class= " fas fa-skull-crossbones"></i> Alert!</h4>
+        <p>Esta es la previsualizacion del alert</p>
+      </div>
+
+      <div class="div-general div-info"id="div-info">
+        <h4><i class= " fas fa-check-circle"></i> Alert!</h4>
+        <p>Esta es la previsualizacion del alert</p>
+      </div>
+    
+      <div class="div-general div-warning" id="div-warning">
+        <h4><i class= " fas fa-exclamation-triangle"></i> Alert!</h4>
+        <p>Esta es la previsualizacion del alert</p>
+      </div>
+    
+      <div class="div-general div-success">
+        <h4><i class= " fas fa-info-circle"></i> Alert!</h4>
+        <p>Esta es la previsualizacion del alert</p>
+      </div>
+    <script src="../plantilla/plugins/jquery/jquery.min.js"></script>
+    <script src="js/ejercicio10_ISRC.js"></script>
+    <script>
+        $(document).ready(function(){
+            //alert("Hola mundo ahora si desde cero");
+        });
+    </script>
+    </body>
+     
+    </html>
+
