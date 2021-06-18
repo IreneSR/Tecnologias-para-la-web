@@ -1,0 +1,128 @@
+/*Para todas las etiquetas: p, h1, h2, etc */
+body{
+    margin: 10px;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.boton{
+    text-decoration: none;
+    padding-top: 10px;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 10px;
+    border-radius: 3px;
+    color: #fff;
+    border-style: solid;
+    border-width: 1px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.boton-default{
+    background-color: rgb(red, green, blue);
+    border-color: rgb(221, 221, 221);
+    color: #000;
+}
+
+.boton-primario{
+    background-color: rgb(58, 117, 253);
+}
+
+.boton-secundario{
+    background-color: rgb(109, 117, 125);
+}
+
+.boton-exito{
+    background-color: rgb(75, 211, 37);
+    border-color: rgb(75, 211, 37);
+}
+
+.boton-info{
+background-color: #17a2b8;
+border-color: #17a2b8;
+}
+.boton-peligro{
+  background-color: rgb(220, 53, 69);
+  border-color: rgb(220, 53, 69);
+}
+
+.boton-precaucion{
+    background-color: rgb(255, 193, 7);
+    border-color: rgb(255, 193, 7);
+}
+
+/*Para cambiar el color de fondo cuando el mouse pase sobre el boton*/
+.boton-primario:hover{
+    background-color: rgba(0, 123, 255, 0.8);
+}
+.boton-secundario:hover{
+    background-color: rgba(108, 117, 125, 0.8);
+}
+.boton-default:hover{
+    background-color: rgba(248, 249, 250, 0.8);
+}
+.boton-exito:hover{
+    background-color: rgba(40, 167, 69, 0.8);
+}
+.boton-info:hover{
+    background-color: rgba(23, 162, 184, 0.8);
+}
+.boton-peligro:hover{
+    background-color: rgba(220, 53, 69, 0.8);
+}
+.boton-precaucion:hover{
+    background-color: rgba(255, 193, 7, 0.8);
+}
+
+h4{
+ margin-bottom: 10px;
+}
+/*Mensajes*/
+
+.div-general{
+    width: 50%;
+    margin-top: 20px;
+    border-style: solid;
+    border-width: 1px;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+}
+.div-danger{
+    background-color: rgb(220, 53, 69);
+    border-color: rgb(220, 53, 69);
+}
+
+.div-info{
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.div-warning{
+    background-color: rgb(255, 193, 7);
+    border-color: rgb(255, 193, 7);
+}
+
+.div-success{
+    background-color: rgb(75, 211, 37);
+    border-color: rgb(75, 211, 37);
+}
+
+/*Variante */
+.div-rojo{
+    display: none;
+    width: 50%;
+    margin-top: 20px;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000;
+    border-radius: 5px;
+    padding: 10px;
+    border-right-color: rgb(220, 53, 69);
+    border-left-width: 5px;
+}
